@@ -58,6 +58,14 @@
                 <a href="lab-task1.html">Laboratory Task 1</a>
     <!-- Link to this lab document -->
     <p><a href="lab2.html">Lab 2</a></p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Registration</title>
+</head>
+<body>
+    <!-- Link to this lab document -->
+    <p><a href="lab2.html">Lab 2</a></p>
 
     <!-- Registration Form -->
     <h1>Lab Registration</h1>
@@ -92,6 +100,26 @@
             <input type="password" id="confirmPassword" name="confirmPassword" required>
         </div>
 
+        <!-- Optional Fields (Date of Birth and Gender) -->
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+        </div>
+        <div>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</body>
         <!-- Optional Fields (Date of Birth and Gender) -->
         <div>
             <label for="dob">Date of Birth:</label>
