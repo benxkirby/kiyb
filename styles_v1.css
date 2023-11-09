@@ -64,13 +64,11 @@ hr {
 }
 
 .videos {
-  display: flex;
-  flex-direction: row;
-  juctify-content: space-around;
-  flex-wrap: wrap;
-  margin-left: auto; /* Add this line to push videos to the right */
-  order: 1;
-  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-column-gap: 15px;
+  grid-row-gap: 30px;
+  margin-top: 10px;
 }
 
 .video{
