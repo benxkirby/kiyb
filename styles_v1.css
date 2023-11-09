@@ -64,6 +64,7 @@ hr {
 
 .videos {
   margin-left: auto; /* Add this line to push videos to the right */
+  order: 1;
 }
 
 .video-section {
