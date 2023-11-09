@@ -93,13 +93,13 @@ main {
   border-top: 4px solid #CCC;
 }
 
-.video-section:first_child (
+.video-section:first_child {
  border-top: none;
 }
 
 .thumbnail {
   position: relative;
-  display flex;
+  display: flex;
 }
 
 .thumbnail::before{
