@@ -139,8 +139,9 @@ main{
     overflow: hidden;
   }
 .thumbnail img{
-    min-width: 250px;
-    min-height: 150px;
+    object-fit: cover;
+    height: 89%;
+    widht: 100%;
   }
 .author img{
   object-fit: cover;
