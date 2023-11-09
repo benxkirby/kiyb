@@ -64,6 +64,10 @@ hr {
 }
 
 .videos {
+  display: flex;
+  flex-direction: row;
+  juctify-content: space-around;
+  flex-wrap: wrap;
   margin-left: auto; /* Add this line to push videos to the right */
   order: 1;
   flex: 1;
