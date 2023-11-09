@@ -58,6 +58,10 @@ hr {
 
 /* Main content styles */
 
+.main {
+  display: flex;
+}
+
 .video-section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -228,6 +232,13 @@ input:focus {
     .search {
       display: none;
     }
+   .main {
+    flex-direction: column; /* Change to column layout on small screens */
+  }
+
+  .videos {
+    justify-content: flex-start; /* Align videos to the start on small screens */
+  }
 }
 
   @media (max-width: 900px) {
