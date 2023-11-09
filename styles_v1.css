@@ -63,7 +63,7 @@ hr {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 3rem 1rem;
   padding: 3rem 0;
-  margin: 0 1.5rem 0 0; /* Adjusted the margin property */
+  padding: 3rem 1.5rem 0 0; /* Adjusted the margin property */
   border-top: 4px solid #CCC;
 }
   
@@ -172,6 +172,7 @@ hr {
   width: 17%;
   background-color: white;
   overflow-y: hidden;
+  order: -1;
 }
 
 /* Styles for the left section in the header */
