@@ -141,7 +141,7 @@ main{
 .thumbnail img{
     object-fit: cover;
     height: 89%;
-    widht: 100%;
+    widht: 70%;
   }
 .author img{
   object-fit: cover;
