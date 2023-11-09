@@ -182,7 +182,6 @@ hr {
   width: 17%;
   background-color: white;
   overflow-y: hidden;
-  order: -1;
 }
 
 /* Styles for the left section in the header */
@@ -230,6 +229,11 @@ input:focus {
   cursor: pointer;
 }
 
+main{
+  height: calc(100vh - 70px);
+  display: flex;
+  background: #f9f9f9;
+}
 /* Media query for hiding the sidebar on small screens */
  @media (max-width: 768px) {
     .side-bar {
