@@ -73,6 +73,11 @@ hr {
   flex: 1;
 }
 
+.video{
+  width: 270px;
+  margin-bottom: 30px;
+}
+
 .video-section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -106,7 +111,8 @@ hr {
 
   .thumbnail-image{
     width: 100%;
-    height: 100%;
+    height: 89%;
+    object-fit: cover;
     min-width: 250px;
     min-height: 150px;
     background-color: #AAA;
