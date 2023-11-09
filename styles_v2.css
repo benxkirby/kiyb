@@ -121,12 +121,10 @@ main{
 }
 
 .videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 3rem 1rem;
-  padding: 3rem 0;
-  padding: 3rem 1.5rem 0 0; /* Adjusted the margin property */
-  border-top: 4px solid #CCC;
+  display: flex;
+  flex-direction: row;
+  juctify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .video{
@@ -141,11 +139,8 @@ main{
     overflow: hidden;
   }
 .thumbnail img{
-    width: 70%;
-    height: 70%;
     min-width: 250px;
     min-height: 150px;
-    background-color: #AAA;
   }
 .author img{
   object-fit: cover;
