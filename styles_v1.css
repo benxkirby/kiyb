@@ -223,6 +223,14 @@ hr {
   bodrder-top: 1px solid #dd;
   overflow-y: scroll;
 }
+.details{
+  display: flex;
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+}
 
 /* Styles for the search input when focused */
 input:focus {
