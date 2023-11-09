@@ -116,7 +116,7 @@ main{
   width: 100%;
   height: 100%;
   padding: 15px 15px;
-  bodrder-top: 1px solid #dd;
+  bodrder-top: 1px solid #ddd;
   overflow-y: scroll;
 }
 
@@ -138,6 +138,7 @@ main{
     border-radious: 5px;
     overflow: hidden;
   }
+
 .thumbnail img{
     object-fit: cover;
     height: 89%;
