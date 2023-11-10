@@ -29,10 +29,11 @@ hr {
   border: none;
 }
 
+/* Navigation styles */
 .nav {
   width: 100%;
   display: flex;
-  flex-direction: column; /* Set this to make it a column */
+  flex-direction: column;
   margin-bottom: 15px;
   margin-top: 15px;
 }
@@ -58,150 +59,61 @@ hr {
 }
 
 /* Main content styles */
-
 .main {
   display: flex;
 }
 
 .videos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around; /* Corrected typo here */
-  flex-wrap: wrap;
-}
-
-.video{
-  width: 270px;
-  margin-bottom: 30px;
-}
-
-.video-section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-column-gap: 15px;
-  grid-row-gap: 30px;
+  gap: 15px;
+  padding: 20px;
+}
+
+.video {
+  width: 100%;
+}
+
+.thumbnail {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
   margin-top: 10px;
 }
-  
-.video-container .thumb{
-  width: 100%;
-  border-radius: 2%;
+
+.title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black;
+  text-decoration: none;
 }
 
-.video-container .flex-box img {
+.author img {
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  width: 35px; /* Corrected typo here */
   margin-right: 10px;
-  margin-left: 5px;
 }
 
-
-.video-container .flex-box{
-  aligh-items: flex-start;
-  margin-top: 5px;
-}
-
-.video-details {
+.title a,
+span {
   font-size: 14px;
-  color: #6a6a6a;
+  color: #555;
+  text-decoration: none;
 }
 
-.video-details {
-  font-weight: 600;
-  display: block;
-}
-  
-.thumbnail {
-  width: 100%;
-  height: 170px;
-  border-radius: 2%; /* Corrected typo here */
-  overflow: hidden;
-}
- 
-  .thumbnail::before{
-    content: attr(data-duration);
-    position: absolute;
-    background-color: rgba(0, 0, 0, .85);
-    color: white;
-    right: 5px;
-    bottom: 5px;
-    padding: .1em .3em;
-    border-radius: .3em;
-    font-size: .9em;
-  }
-
-  .thumbnail-image{
-    width: 100%;
-    height: 89%;
-    object-fit: cover;
-    min-width: 250px;
-    min-height: 150px;
-    background-color: #AAA;
-  }
-
-.thumbnail-image img {
-  object-fit: cover;
-  height: 89%;
-  width: 100%;
-}
-  .video-bottom-section{
-    display: flex;
-    align-items: flex-start;
-    margin-top: 1rem;
-  }
-
-  .channel-icon{
-    margin-right: .75rem;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    background-color: #AAA;
-  }
-
-  .video-details{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .video-title{
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: .5rem;
-    text-decoration: none;
-    color: black;
-  }
-
-  .video-channel-name{
-    margin-bottom: .1rem;
-    text-decoration: none;
-    transition: color 150ms;
-  }
-
-  .video-channel-name:hover{
-    color: #111;
-  }
-
-  .video-channel-name,.vide-metadata{
-    color: #555;
-  }
-
-.video-section-title{
-    grid-column: 1 /-1;
-    margin: -.5rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 .5rem;
-}
-
-.video-section-title-close{
-    border: none;
-    background: none;
-    padding: 0;
-    font-size: 2rem;
-    color: #555;
-    cursor : pointer;
-}
 /* Search section styles */
 .search {
   display: flex;
@@ -213,26 +125,6 @@ hr {
   height: 45px;
 }
 
-/* Sidebar styles */
-.side-bar {
-  height: 100%;
-  width: 17%;
-  background-color: white;
-  overflow-y: hidden;
-}
-
-/* Styles for the left section in the header */
-.left {
-  display: flex;
-  align-items: center;
-}
-
-.left #menu {
-  padding: 0 7px;
-  cursor: pointer;
-}
-
-/* Styles for the search input */
 .search input {
   width: 600px;
   padding: 10px;
@@ -241,72 +133,55 @@ hr {
   border-radius: 2px 0 0 2px;
 }
 
-.content{
-  background-color: white;
-  width: 100%;
-  height: 100%;
-  padding: 15px 15px;
-  bodrder-top: 1px solid #dd;
-  overflow-y: scroll;
-}
-.details{
-  display: flex;
-}
-
-.title{
-  display: flex;
-  flex-direction: column;
-}
-
-/* Styles for the search input when focused */
 input:focus {
   outline: none;
   border: 1px solid #ddd;
 }
 
-/* Styles for the search button */
 .search button {
   height: 100%;
   width: 60px;
   border: none;
 }
 
-/* Styles for the microphone icon */
 .mic {
   margin-top: 10px;
 }
 
-/* Styles for material icons */
 .material-icons {
   color: rgb(100, 100, 100);
   padding: 0 7px;
   cursor: pointer;
 }
 
-main{
-  height: calc(100vh - 70px);
-  display: flex;
-  background: #f9f9f9;
+/* Sidebar styles */
+.side-bar {
+  height: 100%;
+  width: 17%;
+  background-color: white;
+  overflow-y: hidden;
 }
+
 /* Media query for hiding the sidebar on small screens */
- @media (max-width: 768px) {
-    .side-bar {
-      display: none;
-    }
-    .search {
-      display: none;
-    }
-   .main {
-    flex-direction: column; /* Change to column layout on small screens */
+@media (max-width: 768px) {
+  .side-bar {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  .main {
+    flex-direction: column;
+    align-items: center;
   }
 
   .videos {
-    justify-content: flex-start; /* Align videos to the start on small screens */
+    justify-content: center;
   }
 }
 
-  @media (max-width: 900px) {
-    .search input {
-      width: 25rem;
-    }
+@media (max-width: 900px) {
+  .search input {
+    width: 25rem;
   }
+}
