@@ -66,8 +66,8 @@ hr {
 .videos {
   padding-left: 16%;
   padding-right: 1%;
-  padding-bottom: 20px:
-  padding-top: 20px:
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .video{
@@ -88,12 +88,13 @@ hr {
   border-radius: 2%;
 }
 
-.video-container .flex-box img{
+.video-container .flex-box img {
   border-radius: 50%;
-  wight: 35px;
+  width: 35px; /* Corrected typo here */
   margin-right: 10px;
   margin-left: 5px;
 }
+
 
 .video-container .flex-box{
   aligh-items: flex-start;
