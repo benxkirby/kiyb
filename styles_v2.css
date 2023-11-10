@@ -124,13 +124,13 @@ main{
  display: flex;
   flex-direction: row;
   juctify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .video{
   width: 270px;
   margin-bottom: 30px;
-  justify-content: space-between;
 }
 
 .thumbnail{
