@@ -130,6 +130,7 @@ main{
 .video{
   width: 270px;
   margin-bottom: 30px;
+  justify-content: space-between;
 }
 
 .thumbnail{
