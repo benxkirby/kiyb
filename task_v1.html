@@ -1,3 +1,4 @@
+User
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,18 +13,6 @@
       height: 100%;
       margin: 0;
       padding: 0;
-    }
-    .container {
-      display: flex;
-    }
-    .header {
-      flex: 1;
-      background-color: #f0f0f0; /* Adjust as needed */
-      padding: 20px;
-    }
-    .days-container {
-      flex: 1;
-      padding: 20px;
     }
     .weekly-plan {
       border-collapse: collapse;
@@ -48,7 +37,27 @@
     <div class="header">
       <h1 class="header-title">PLAN WEEKLY</h1>
     </div>
-    <div class="days-container">
+    <div class="left">
+      <table class="weekly-plan">
+        <tr style="height: 50%;">
+          <td class="section-block">
+            <div class="top-block">
+              <h2 class="section-title">Top 3 Goals</h2>
+              <textarea class="text-input" rows="3" type="string"></textarea>
+            </div>
+            <div class="middle-block">
+              <h2 class="section-title">Everything Else</h2>
+              <textarea class="text-input" rows="11" type="string"></textarea>
+            </div>
+            <div class="bottom-block">
+              <h2 class="section-title">Next Week</h2>
+              <textarea class="text-input" rows="3" type="string"></textarea>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="right">
       <div class="days-table" style="height: 100%;">
         <div class="days-row" style="height: 50%;">
           <div class="day">
