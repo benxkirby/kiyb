@@ -97,7 +97,7 @@ bottom-block {
 }
 
 .container > div {
-  border: 1px dashed #888;
+  border: 0.5cm solid #888;
 }
 
 .header {
