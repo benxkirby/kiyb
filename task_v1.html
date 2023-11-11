@@ -13,22 +13,20 @@
       margin: 0;
       padding: 0;
     }
-    .weekly-plan {
-      border: 1px solid black; /* Set border to a thin line */
-      border-collapse: collapse;
-      height: 100vh;
+
+    article {
+      display: inline-grid;
+      grid-template-rows: 100px 100px;
+      grid-template-columns: 100px 100px 100px;
+      grid-gap: 3px;
     }
-    .weekly-plan td {
+
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border: 2px solid black;
-      vertical-align: middle;
-      text-align: center;
-    }
-    .text-input {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 5px;
-      box-sizing: border-box;
+      font-size: 1.5em; /* Adjusted font size */
     }
   </style>
 </head>
@@ -58,36 +56,14 @@
       </table>
     </div>
     <div class="right">
-      <div class="days-table" style="height: 100%;">
-        <div class="days-row" style="height: 50%;">
-          <div class="day">
-            Monday
-            <textarea class="text-input" rows="11" type="string"></textarea>
-          </div>
-          <div class="day">
-            Tuesday
-            <textarea class="text-input" rows="11" type="string"></textarea>
-          </div>
-          <div class="day">
-            Wednesday
-            <textarea class="text-input" rows="11" type="string"></textarea>
-          </div>
-        </div>
-        <div class="days-row" style="height: 50%;">
-          <div class="day">
-            Thursday
-            <textarea class="text-input" rows="11" type="string"></textarea>
-          </div>
-          <div class="day">
-            Friday
-            <textarea class="text-input" rows="11" type="string"></textarea>
-          </div>
-          <div class="day">
-            Saturday / Sunday
-            <textarea class="text-input" rows="11" type="string"></textarea>
-          </div>
-        </div>
-      </div>
+      <article>
+        <section>Monday</section>
+        <section>Tuesday</section>
+        <section>Wednesday</section>
+        <section>Thursday</section>
+        <section>Friday</section>
+        <section>Saturday / Sunday</section>
+      </article>
     </div>
   </div>
 </body>
