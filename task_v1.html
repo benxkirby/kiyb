@@ -15,10 +15,11 @@
     }
 
     article {
-      display: inline-grid;
+      display: grid;
       grid-template-rows: 100px 100px;
-      grid-template-columns: 100px 100px 100px;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 3px;
+      width: 100%; /* Make the article element 100% width */
     }
 
     section {
