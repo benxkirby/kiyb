@@ -14,53 +14,6 @@
       padding: 0;
     }
 
-    .container {
-      display: flex;
-    }
-
-    .header {
-      width: 100%;
-      text-align: center;
-    }
-
-    .left {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .weekly-plan {
-      height: 50vh;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .section-block {
-      width: 100%;
-      text-align: center;
-    }
-
-    .text-input {
-      width: 80%; /* Adjusted input width */
-      margin: 0 auto; /* Centered input */
-      box-sizing: border-box;
-      resize: none; /* Disabled textarea resize handle */
-      border: none; /* Removed border */
-      outline: none; /* Removed outline */
-    }
-
-    .right {
-      width: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
     .days-of-week {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -70,7 +23,39 @@
 
     .day {
       display: flex;
+      flex-direction: column; /* Added to stack text in a column */
+      justify-content: flex-start; /* Adjusted to align content to the top */
+      align-items: center;
+      border: 2px solid black;
+      font-size: 1.5em;
+    }
+
+    article {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 3px;
+      height: 50vh;
+    }
+
+    .weekly-plan {
+      display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .section-title {
+      font-size: 1.2em; /* Adjusted font size for better visibility */
+    }
+
+    .text-input {
+      width: 100%;
+      margin: 5px 0;
+    }
+
+    section {
+      display: flex;
       justify-content: center;
       align-items: center;
       border: 2px solid black;
@@ -80,21 +65,24 @@
 </head>
 <body>
   <div class="container">
+    <div class="header">
+      <h1 class="header-title">PLAN WEEKLY</h1>
+    </div>
     <div class="left">
-      <div class="weekly-plan">
+      <article class="weekly-plan">
         <div class="section-block">
           <h2 class="section-title">Top 3 Goals</h2>
           <textarea class="text-input" rows="3" type="string"></textarea>
         </div>
-        <div class="section-block">
+        <div class="middle-block">
           <h2 class="section-title">Everything Else</h2>
           <textarea class="text-input" rows="11" type="string"></textarea>
         </div>
-        <div class="section-block">
+        <div class="bottom-block">
           <h2 class="section-title">Next Week</h2>
           <textarea class="text-input" rows="3" type="string"></textarea>
         </div>
-      </div>
+      </article>
     </div>
     <div class="right">
       <div class="days-of-week">
