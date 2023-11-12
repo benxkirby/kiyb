@@ -14,35 +14,55 @@
       padding: 0;
     }
 
-    .days-of-week {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+    .container {
+      display: flex;
       height: 100vh;
     }
 
-    .day {
+    .header {
+      flex: 1;
       display: flex;
-      flex-direction: column; /* Added to stack text in a column */
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
-      border: 2px solid black;
-      font-size: 1.5em;
     }
 
-    article {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 3px;
+    .left, .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .weekly-plan {
       height: 50vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
-    section {
+    .section-title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .text-input {
+      width: 80%; /* Adjusted width */
+      box-sizing: border-box;
+    }
+
+    .days-of-week {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      height: 50vh;
+    }
+
+    .day {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       border: 2px solid black;
@@ -56,24 +76,20 @@
       <h1 class="header-title">PLAN WEEKLY</h1>
     </div>
     <div class="left">
-      <table class="weekly-plan">
-        <tr style="height: 100%;">
-          <td class="section-block">
-            <div class="top-block">
-              <h2 class="section-title">Top 3 Goals</h2>
-              <textarea class="text-input" rows="3" type="string"></textarea>
-            </div>
-            <div class="middle-block">
-              <h2 class="section-title">Everything Else</h2>
-              <textarea class="text-input" rows="11" type="string"></textarea>
-            </div>
-            <div class="bottom-block">
-              <h2 class="section-title">Next Week</h2>
-              <textarea class="text-input" rows="3" type="string"></textarea>
-            </div>
-          </td>
-        </tr>
-      </table>
+      <div class="weekly-plan">
+        <div class="top-block">
+          <h2 class="section-title">Top 3 Goals</h2>
+          <textarea class="text-input" rows="3" type="string"></textarea>
+        </div>
+        <div class="middle-block">
+          <h2 class="section-title">Everything Else</h2>
+          <textarea class="text-input" rows="11" type="string"></textarea>
+        </div>
+        <div class="bottom-block">
+          <h2 class="section-title">Next Week</h2>
+          <textarea class="text-input" rows="3" type="string"></textarea>
+        </div>
+      </div>
     </div>
     <div class="right">
       <div class="days-of-week">
