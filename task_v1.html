@@ -14,28 +14,60 @@
       padding: 0;
     }
 
-    article {
+    .parent {
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
       grid-gap: 3px;
-      width: 100%;
+      height: 100vh;
     }
 
-    section {
+    .parent > div {
+      border: 1px dashed #888;
+      background-color: #ccc; /* Gray background color */
+    }
+
+    .div1 { grid-area: 1 / 1 / 2 / 5; }
+    .div2 { grid-area: 2 / 1 / 5 / 2; }
+    .div3 { grid-area: 2 / 2 / 3 / 3; }
+    .div4 { grid-area: 2 / 3 / 3 / 4; }
+    .div5 { grid-area: 2 / 4 / 3 / 5; }
+    .div6 { grid-area: 3 / 2 / 4 / 3; }
+    .div7 { grid-area: 3 / 3 / 4 / 4; }
+    .div8 { grid-area: 3 / 4 / 4 / 5; }
+    .div9 { grid-area: 4 / 1 / 5 / 5; } /* Updated for an empty space */
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+    }
+
+    .weekly-plan {
+      height: 100%;
+    }
+
+    .section-block {
+      height: 100%;
+    }
+
+    .text-input {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    .right {
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 2px solid black;
-      font-size: 1.5em;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <h1 class="header-title">PLAN WEEKLY</h1>
-    </div>
     <div class="left">
       <table class="weekly-plan">
         <tr style="height: 50%;">
@@ -57,14 +89,17 @@
       </table>
     </div>
     <div class="right">
-      <article>
-        <section>Monday</section>
-        <section>Tuesday</section>
-        <section>Wednesday</section>
-        <section>Thursday</section>
-        <section>Friday</section>
-        <section>Saturday / Sunday</section>
-      </article>
+      <div class="parent">
+        <div class="div1"> </div>
+        <div class="div2"> </div>
+        <div class="div3"> </div>
+        <div class="div4"> </div>
+        <div class="div5"> </div>
+        <div class="div6"> </div>
+        <div class="div7"> </div>
+        <div class="div8"> </div>
+        <div class="div9"> </div>
+      </div>
     </div>
   </div>
 </body>
