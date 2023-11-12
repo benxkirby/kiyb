@@ -16,22 +16,19 @@
 
     .container {
       display: flex;
-      height: 100vh;
     }
 
     .header {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 100%;
+      text-align: center;
     }
 
-    .left, .right {
-      flex: 1;
+    .left {
+      width: 50%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
 
     .weekly-plan {
@@ -39,25 +36,36 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
 
-    .section-title {
-      font-size: 1.5em;
-      margin-bottom: 10px;
+    .section-block {
+      width: 100%;
+      text-align: center;
     }
 
     .text-input {
-      width: 80%; /* Adjusted width */
+      width: 80%; /* Adjusted input width */
+      margin: 0 auto; /* Centered input */
       box-sizing: border-box;
+      resize: none; /* Disabled textarea resize handle */
+      border: none; /* Removed border */
+      outline: none; /* Removed outline */
+    }
+
+    .right {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .days-of-week {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      height: 50vh;
+      height: 100vh;
     }
 
     .day {
@@ -72,20 +80,17 @@
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <h1 class="header-title">PLAN WEEKLY</h1>
-    </div>
     <div class="left">
       <div class="weekly-plan">
-        <div class="top-block">
+        <div class="section-block">
           <h2 class="section-title">Top 3 Goals</h2>
           <textarea class="text-input" rows="3" type="string"></textarea>
         </div>
-        <div class="middle-block">
+        <div class="section-block">
           <h2 class="section-title">Everything Else</h2>
           <textarea class="text-input" rows="11" type="string"></textarea>
         </div>
-        <div class="bottom-block">
+        <div class="section-block">
           <h2 class="section-title">Next Week</h2>
           <textarea class="text-input" rows="3" type="string"></textarea>
         </div>
