@@ -14,33 +14,30 @@
       padding: 0;
     }
 
-    .parent {
+    .days-of-week {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(4, 1fr);
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
-      height: 100%; /* Stretch to the height of the page */
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: 1fr;
+      height: 100vh; /* Stretch to the height of the page */
     }
 
-    .div1 { grid-area: 1 / 1 / 2 / 5; }
-    .div2 { grid-area: 2 / 1 / 5 / 2; }
-    .div3, .div4, .div5, .div6, .div7, .div8 { 
-      grid-area: 2 / 2 / 5 / 5; /* Stretch to the width of the page */
+    .day {
       display: flex;
       justify-content: center;
       align-items: center;
       border: 2px solid black;
       font-size: 1.5em;
     }
-    .div9 { grid-area: 4 / 1 / 5 / 5; background-color: #ccc; }
 
     article {
       display: grid;
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 3px;
-      height: 100%;
+    }
+
+    .weekly-plan {
+      height: 50vh;
     }
 
     section {
@@ -59,7 +56,7 @@
     </div>
     <div class="left">
       <table class="weekly-plan">
-        <tr style="height: 50%;">
+        <tr style="height: 100%;">
           <td class="section-block">
             <div class="top-block">
               <h2 class="section-title">Top 3 Goals</h2>
@@ -78,16 +75,14 @@
       </table>
     </div>
     <div class="right">
-      <div class="parent">
-        <div class="div1"> </div>
-        <div class="div2"> </div>
-        <div class="div3">Monday</div>
-        <div class="div4">Tuesday</div>
-        <div class="div5">Wednesday</div>
-        <div class="div6">Thursday</div>
-        <div class="div7">Friday</div>
-        <div class="div8">Saturday / Sunday</div>
-        <div class="div9"> </div>
+      <div class="days-of-week">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
       </div>
     </div>
   </div>
