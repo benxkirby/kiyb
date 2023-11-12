@@ -18,13 +18,8 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(4, 1fr);
-      grid-gap: 3px;
-      height: 100vh;
-    }
-
-    .parent > div {
-      border: 1px dashed #888;
-      background-color: #ccc; /* Gray background color */
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
     }
 
     .div1 { grid-area: 1 / 1 / 2 / 5; }
@@ -35,39 +30,30 @@
     .div6 { grid-area: 3 / 2 / 4 / 3; }
     .div7 { grid-area: 3 / 3 / 4 / 4; }
     .div8 { grid-area: 3 / 4 / 4 / 5; }
-    .div9 { grid-area: 4 / 1 / 5 / 5; } /* Updated for an empty space */
+    .div9 { grid-area: 4 / 1 / 5 / 5; background-color: #ccc; }
 
-    .container {
+    article {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 3px;
       height: 100%;
     }
 
-    .weekly-plan {
-      height: 100%;
-    }
-
-    .section-block {
-      height: 100%;
-    }
-
-    .text-input {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 5px;
-      box-sizing: border-box;
-    }
-
-    .right {
+    section {
       display: flex;
       justify-content: center;
       align-items: center;
+      border: 2px solid black;
+      font-size: 1.5em;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="header">
+      <h1 class="header-title">PLAN WEEKLY</h1>
+    </div>
     <div class="left">
       <table class="weekly-plan">
         <tr style="height: 50%;">
