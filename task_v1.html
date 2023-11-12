@@ -23,11 +23,12 @@
 
     .day {
       display: flex;
-      flex-direction: column; /* Added to stack text in a column */
-      justify-content: flex-start; /* Adjusted to align content to the top */
+      flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
       border: 2px solid black;
       font-size: 1.5em;
+      padding: 5px; /* Added padding for better visual appearance */
     }
 
     article {
@@ -46,12 +47,13 @@
     }
 
     .section-title {
-      font-size: 1.2em; /* Adjusted font size for better visibility */
+      font-size: 1.2em;
     }
 
     .text-input {
-      width: 100%;
+      width: calc(100% - 10px); /* Adjusted width to account for padding */
       margin: 5px 0;
+      box-sizing: border-box; /* Ensures padding and border are included in the width */
     }
 
     section {
