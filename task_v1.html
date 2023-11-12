@@ -51,10 +51,12 @@
     }
 
     .text-input {
-      width: 100%;
+      width: calc(100% - 10px); /* Adjusted width to accommodate borders */
       margin: 0;
       padding: 5px;
       box-sizing: border-box;
+      border: none; /* Removed default border */
+      border-bottom: 1px solid #000; /* Added bottom border */
     }
   </style>
 </head>
