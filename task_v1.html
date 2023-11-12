@@ -48,12 +48,7 @@
 
     .section-title {
       font-size: 1.2em;
-    }
-
-    .text-input {
-      width: calc(100% - 10px); /* Adjusted width to account for padding */
-      margin: 5px 0;
-      box-sizing: border-box; /* Ensures padding and border are included in the width */
+      margin-bottom: 5px; /* Added margin for better visual appearance */
     }
 
     section {
@@ -62,6 +57,7 @@
       align-items: center;
       border: 2px solid black;
       font-size: 1.5em;
+      padding: 5px; /* Added padding for better visual appearance */
     }
   </style>
 </head>
@@ -73,16 +69,13 @@
     <div class="left">
       <article class="weekly-plan">
         <div class="section-block">
-          <h2 class="section-title">Top 3 Goals</h2>
-          <input class="text-input" type="text">
+          <section class="section-title">Top 3 Goals</section>
         </div>
         <div class="middle-block">
-          <h2 class="section-title">Everything Else</h2>
-          <input class="text-input" type="text">
+          <section class="section-title">Everything Else</section>
         </div>
         <div class="bottom-block">
-          <h2 class="section-title">Next Week</h2>
-          <input class="text-input" type="text">
+          <section class="section-title">Next Week</section>
         </div>
       </article>
     </div>
