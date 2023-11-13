@@ -20,21 +20,24 @@
     }
 
     .header {
-      flex: 0 0 auto;
-    }
-
-    .header-title {
-      margin: 0;
+      flex: 0 0 auto; /* Added to prevent the header from stretching */
     }
 
     .left {
-      flex: 1;
+      flex: 1; /* Allow the left section to take available space */
       display: flex;
       flex-direction: column;
-      padding: 10px;
+      padding: 10px; /* Added padding for spacing */
     }
 
-    .article-container {
+    article {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 3px;
+      height: 50vh;
+    }
+
+    .weekly-plan {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -47,29 +50,12 @@
     }
 
     .text-input {
-      width: calc(100% - 10px);
+      width: calc(100% - 10px); /* Adjusted width to accommodate borders */
       margin: 0;
       padding: 5px;
       box-sizing: border-box;
-      border: none;
-      border-bottom: 1px solid #000;
-    }
-
-    .days-of-week {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      height: 100vh;
-    }
-
-    .day {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      border: 2px solid black;
-      font-size: 1.5em;
-      padding: 5px;
+      border: none; /* Removed default border */
+      border-bottom: 1px solid #000; /* Added bottom border */
     }
   </style>
 </head>
@@ -79,29 +65,35 @@
       <h1 class="header-title">PLAN WEEKLY</h1>
     </div>
     <div class="left">
-      <div class="article-container">
-        <article class="weekly-plan">
-          <section>
-            <h2 class="section-title">Top 3 Goals</h2>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-          </section>
-          <section>
-            <h2 class="section-title">Everything Else</h2>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <!-- Repeat for additional lines -->
-          </section>
-          <section>
-            <h2 class="section-title">Next Week</h2>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-          </section>
-        </article>
-      </div>
+      <article class="weekly-plan">
+        <section>
+          <h2 class="section-title">Top 3 Goals</h2>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+        </section>
+        <section>
+          <h2 class="section-title">Everything Else</h2>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <!-- Repeat for additional lines -->
+        </section>
+        <section>
+          <h2 class="section-title">Next Week</h2>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+        </section>
+      </article>
     </div>
     <div class="right">
       <div class="days-of-week">
