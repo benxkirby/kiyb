@@ -20,14 +20,18 @@
     }
 
     .header {
-      flex: 0 0 auto; /* Added to prevent the header from stretching */
+      flex: 0 0 auto;
+    }
+
+    .header-title {
+      margin: 0;
     }
 
     .left {
-      flex: 1; /* Allow the left section to take available space */
+      flex: 1;
       display: flex;
       flex-direction: column;
-      padding: 10px; /* Added padding for spacing */
+      padding: 10px;
     }
 
     .article-container {
@@ -43,12 +47,12 @@
     }
 
     .text-input {
-      width: calc(100% - 10px); /* Adjusted width to accommodate borders */
+      width: calc(100% - 10px);
       margin: 0;
       padding: 5px;
       box-sizing: border-box;
-      border: none; /* Removed default border */
-      border-bottom: 1px solid #000; /* Added bottom border */
+      border: none;
+      border-bottom: 1px solid #000;
     }
 
     .days-of-week {
