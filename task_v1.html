@@ -84,7 +84,13 @@
       grid-gap: 3px;
       flex: 1; /* Added flex property to stretch the right side */
     }
-
+    
+    .right {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      flex: 1; /* Added flex property to stretch the right side */
+    }
   </style>
 </head>
 <body>
@@ -129,13 +135,15 @@
         </article>
       </div>
     </div>
-    <div class="days-of-week">
-      <div class="day">Monday</div>
-      <div class="day">Tuesday</div>
-      <div class="day">Wednesday</div>
-      <div class="day">Thursday</div>
-      <div class="day">Friday</div>
-      <div class="day">Saturday / Sunday</div>
+    <div class="right">
+      <div class="days-of-week">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday / Sunday</div>
+      </div>
     </div>
   </div>
 </body>
