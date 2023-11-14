@@ -14,14 +14,26 @@
       padding: 0;
       display: grid;
       grid-template-columns: auto 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "header header"
+        "left right";
     }
 
     .container {
       height: 100vh;
+      grid-gap: 10px;
+      grid-area: 1 / 1 / 2 / 3;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "header header"
+        "left right";
     }
 
     .header {
-      grid-column: span 2;
+      grid-area: header;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -34,10 +46,10 @@
     }
 
     .left {
+      grid-area: left;
       display: flex;
       flex-direction: column;
       padding: 10px;
-      flex: 1; /* Added flex property to stretch the left side */
     }
 
     .article-container {
@@ -62,10 +74,10 @@
     }
 
     .days-of-week {
+      grid-area: right;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      height: 100vh;
     }
 
     .day {
@@ -82,14 +94,6 @@
       display: grid;
       grid-template-rows: repeat(4, 1fr);
       grid-gap: 3px;
-      flex: 1; /* Added flex property to stretch the right side */
-    }
-    
-    .right {
-      display: flex;
-      flex-direction: column;
-      padding: 10px;
-      flex: 1; /* Added flex property to stretch the right side */
     }
   </style>
 </head>
@@ -135,15 +139,13 @@
         </article>
       </div>
     </div>
-    <div class="right">
-      <div class="days-of-week">
-        <div class="day">Monday</div>
-        <div class="day">Tuesday</div>
-        <div class="day">Wednesday</div>
-        <div class="day">Thursday</div>
-        <div class="day">Friday</div>
-        <div class="day">Saturday / Sunday</div>
-      </div>
+    <div class="days-of-week">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+      <div class="day">Friday</div>
+      <div class="day">Saturday / Sunday</div>
     </div>
   </div>
 </body>
