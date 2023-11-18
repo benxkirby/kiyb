@@ -50,12 +50,11 @@
       flex-direction: column;
       padding: 10px;
       max-width: 300px;
-      height: 100%; /* Ensure the left side covers the entire height */
     }
 
     .article-container {
       display: grid;
-      grid-template-rows: auto 1fr auto; /* Adjusted grid-template-rows */
+      grid-template-rows: auto auto auto; /* Adjusted grid-template-rows */
       gap: 10px; /* Added gap for better spacing */
       height: 100%; /* Ensure .article-container covers the entire height */
     }
@@ -94,7 +93,7 @@
 
     .weekly-plan {
       display: grid;
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: auto auto auto; /* Adjusted grid-template-rows */
       grid-gap: 3px;
       height: 100%; /* Ensure .weekly-plan covers the entire height */
     }
