@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE-edges">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles_v4.css">
+  <link rel="stylesheet" href="styles_v10.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=YourCustomFont" rel="stylesheet">
   <style>
@@ -33,15 +33,19 @@
     .header {
       grid-area: header;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      flex-direction: row;
+      justify-content: space-between;
       align-items: flex-start;
       padding: 10px;
       margin: 0;
     }
 
     .header h1 {
-      margin-bottom: 10px;
+      margin-right: 20px; /* Adjusted margin for separation */
+    }
+
+    .header h2 {
+      margin: 0;
     }
 
     .left {
@@ -108,7 +112,7 @@
       <h1>PLAN WEEKLY</h1>
       <h2>Week Of</h2>
       <h2>Healthy Habit</h2>
-      <h2 style="margin-bottom: 10px;">Room for Improvement</h2>
+      <h2>Room for Improvement</h2>
       <h2>Rocked It</h2>
     </div>
     <div class="left">
