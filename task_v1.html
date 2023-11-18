@@ -23,6 +23,14 @@
         "header header"
         "left right";
     }
+    
+    .container {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 450px 1fr;
+      grid-template-rows: 160px 1fr;
+      border: 1px solid #ddd; /* Added border for the container */
+    }
 
     .header {
       grid-area: header;
