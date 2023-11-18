@@ -14,29 +14,19 @@
       padding: 0;
       display: grid;
       grid-template-columns: auto 1fr;
-      grid-template-rows: auto 1fr;
-      grid-template-areas:
-        "header header"
-        "left right";
     }
 
     .container {
       height: 100vh;
       display: grid;
       grid-template-columns: auto 1fr;
-      grid-template-rows: auto 1fr;
-      grid-template-areas:
-        "header header"
-        "left right";
     }
 
     .header {
-      grid-area: header;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       padding: 10px;
-      margin: 0;
     }
 
     .header h1, .header h2 {
@@ -45,18 +35,18 @@
     }
 
     .left {
-      grid-area: left;
       display: flex;
       flex-direction: column;
       padding: 10px;
       max-width: 300px;
+      height: 100%;
     }
 
     .article-container {
-      display: grid;
-      grid-template-rows: auto auto auto 1fr; /* Adjusted grid-template-rows */
+      display: flex;
+      flex-direction: column;
       gap: 10px;
-      height: 100%; /* Ensure .article-container covers the entire height */
+      flex: 1;
     }
 
     .section-title {
@@ -74,11 +64,9 @@
     }
 
     .days-of-week {
-      grid-area: right;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      height: 100%;
     }
 
     .day {
@@ -93,9 +81,9 @@
 
     .weekly-plan {
       display: grid;
-      grid-template-rows: auto auto auto 1fr; /* Adjusted grid-template-rows */
-      grid-gap: 3px;
-      height: 100%; /* Ensure .weekly-plan covers the entire height */
+      grid-template-rows: auto auto auto 1fr;
+      gap: 3px;
+      flex: 1;
     }
   </style>
 </head>
