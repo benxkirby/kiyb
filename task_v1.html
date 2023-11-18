@@ -23,14 +23,6 @@
         "header header"
         "left right";
     }
-    
-    .container {
-      height: 100%;
-      display: grid;
-      grid-template-columns: 450px 1fr;
-      grid-template-rows: 160px 1fr;
-      border: 1px solid #ddd; /* Added border for the container */
-    }
 
     .header {
       grid-area: header;
@@ -40,7 +32,7 @@
       align-items: flex-start;
       padding: 10px;
       margin: 0;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid #ccc; /* Added gray border */
     }
 
     .header h1 {
@@ -59,7 +51,7 @@
       max-width: 450px;
       height: 100%;
       overflow: auto;
-      border-right: 1px solid #ddd;
+      border-right: 1px solid #ccc; /* Added gray border */
     }
 
     .article-container {
@@ -88,7 +80,6 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      height: 100%;
     }
 
     .day {
