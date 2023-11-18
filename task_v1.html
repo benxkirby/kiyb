@@ -18,26 +18,20 @@
       font-family: 'YourCustomFont', sans-serif;
       display: grid;
       grid-template-columns: 450px 1fr;
-      grid-template-rows: 160px 1fr;
-    }
-
-    .container {
-      height: 100vh;
-      display: grid;
-      grid-template-columns: 450px 1fr;
-      grid-template-rows: 160px 1fr;
-      border: 1px solid #ddd; /* Added border for the container */
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "header header"
+        "left right";
     }
 
     .header {
-      grid-column: span 2;
+      grid-area: header;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
       padding: 10px;
       margin: 0;
-      border-bottom: 1px solid #000; /* Added border-bottom */
     }
 
     .header h1 {
@@ -49,13 +43,13 @@
     }
 
     .left {
+      grid-area: left;
       display: flex;
       flex-direction: column;
       padding: 10px;
       max-width: 450px;
       height: 100%;
       overflow: auto;
-      border-right: 1px solid #ddd; /* Added border-right with a lighter color */
     }
 
     .article-container {
@@ -80,6 +74,7 @@
     }
 
     .days-of-week {
+      grid-area: right;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
@@ -105,55 +100,53 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>PLAN WEEKLY</h1>
-      <h2>Week Of</h2>
-      <h2>Healthy Habit</h2>
-      <h2>Room for Improvement</h2>
-      <h2>Rocked It</h2>
+  <div class="header">
+    <h1>PLAN WEEKLY</h1>
+    <h2>Week Of</h2>
+    <h2>Healthy Habit</h2>
+    <h2>Room for Improvement</h2>
+    <h2>Rocked It</h2>
+  </div>
+  <div class="left">
+    <div class="article-container">
+      <article class="weekly-plan">
+        <section>
+          <h2 class="section-title">Top 3 Goals</h2>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+        </section>
+        <section>
+          <h2 class="section-title">Everything Else</h2>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <!-- Repeat for additional lines -->
+        </section>
+        <section>
+          <h2 class="section-title">Next Week</h2>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+          <textarea class="text-input" rows="1" type="text"></textarea>
+        </section>
+      </article>
     </div>
-    <div class="left">
-      <div class="article-container">
-        <article class="weekly-plan">
-          <section>
-            <h2 class="section-title">Top 3 Goals</h2>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-          </section>
-          <section>
-            <h2 class="section-title">Everything Else</h2>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <!-- Repeat for additional lines -->
-          </section>
-          <section>
-            <h2 class="section-title">Next Week</h2>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-            <textarea class="text-input" rows="1" type="text"></textarea>
-          </section>
-        </article>
-      </div>
-    </div>
-    <div class="days-of-week">
-      <div class="day">Monday</div>
-      <div class="day">Tuesday</div>
-      <div class="day">Wednesday</div>
-      <div class="day">Thursday</div>
-      <div class="day">Friday</div>
-      <div class="day">Saturday / Sunday</div>
-    </div>
+  </div>
+  <div class="days-of-week">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+    <div class="day">Friday</div>
+    <div class="day">Saturday / Sunday</div>
   </div>
 </body>
 </html>
