@@ -93,19 +93,7 @@ bottom-block {
   height: 100%;
   grid-template-areas: "header header" "left right";
   grid-template-columns: 450px 1fr;
-  grid-template-rows: auto 1fr;
-  border: 0.2cm solid #888; /* Added border to the entire grid */
-}
-
-.left {
-  grid-area: left;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  max-width: 450px;
-  height: 100%;
-  overflow: auto;
-  border-right: 1px solid #ccc; /* Added gray border */
+  grid-template-rows: 160px 1fr;
 }
 
 .container > div {
