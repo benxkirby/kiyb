@@ -127,10 +127,17 @@
 
         .home-inner {
             position: relative;
-            width: 100%;
-            max-width: 500px; /* Adjust the width as needed */
+            width: 150px; /* Adjust the width as needed */
+            height: 150px; /* Set the height to match the width for a perfect circle */
             margin: 20px auto; /* Center the image horizontally */
             border-radius: 50%;
+            overflow: hidden; /* Clip the image to the border-radius */
+        }
+
+        .home-inner img {
+            width: 100%; /* Make the image fill the container */
+            height: auto; /* Maintain the aspect ratio */
+            object-fit: cover; /* Cover the container without stretching */
         }
 
         /* Add more styles for other classes and elements as needed */
@@ -150,7 +157,6 @@
         </ul>
     </nav>
 
-        <!-- Page Title -->
    <!-- About Me Section -->
     <section id="about-me">
         <h2>About Me</h2>
@@ -158,7 +164,9 @@
             <p class="hi-i-am">Hi, I am John,</p>
             <p class="hi-i-am">Creative Technologist</p>
         </div>
-        <img class="home-inner" alt="" src="https://i.redd.it/g4fm789q2cc11.jpg">
+        <div class="home-inner">
+            <img alt="" src="https://i.redd.it/g4fm789q2cc11.jpg">
+        </div>
         <div class="amet-minim-mollit">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
