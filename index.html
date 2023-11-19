@@ -80,9 +80,9 @@
         /* Style the overlay container */
         .overlay-container {
             position: relative;
+            flex-grow: 1; /* Make the overlay container grow to fill the remaining space */
         }
-
-        /* Updated styles for the footer */
+        
         .footer {
             width: 100%;
             background-color: var(--color-white);
@@ -298,20 +298,13 @@
             </ul>
         </div>
     </section>
-
-    <body class="flex-container">
-        <!-- Your existing HTML content goes here -->
-    
-        <!-- Footer Section -->
-        <div class="overlay-container">
-            <div class="footer">
-                <div class="footer-child"></div>
-                <div class="copyright-2020-all">
-                    Copyright ©2023 All rights reserved
-                </div>
+    <div class="overlay-container">
+        <div class="footer">
+            <div class="footer-child"></div>
+            <div class="copyright-2020-all">
+                Copyright ©2023 All rights reserved
             </div>
         </div>
-    </body>
-
+    </div>
 </body>
 </html>
