@@ -103,10 +103,10 @@
         }
 
         .hi-i-am-container {
-            position: relative; /* Change to relative */
-            text-align: center; /* Center text within the container */
-            margin: 0 auto; /* Center the container horizontally */
-            max-width: 506px; /* Set a maximum width */
+            position: relative;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 506px;
         }
 
         .hi-i-am {
@@ -121,17 +121,16 @@
             margin: 0;
             font-size: 16px;
             line-height: 1.5;
-            max-width: 600px; /* Set a maximum width */
-            margin: 20px auto; /* Center the container horizontally */
+            max-width: 600px;
+            margin: 20px auto;
         }
-                .home-inner {
-          position: absolute;
-          top: 210px;
-          left: 760px;
-          border-radius: 50%;
-          width: 243px;
-          height: 243px;
-          object-fit: cover;
+
+        .home-inner {
+            position: relative;
+            width: 100%;
+            max-width: 500px; /* Adjust the width as needed */
+            margin: 20px auto; /* Center the image horizontally */
+            border-radius: 50%;
         }
 
         /* Add more styles for other classes and elements as needed */
@@ -155,14 +154,11 @@
    <!-- About Me Section -->
     <section id="about-me">
         <h2>About Me</h2>
-        <div>
-            <img class="home-inner" alt="" src="https://i.redd.it/g4fm789q2cc11.jpg">
-            <p>Username: [XxXben228XxX]</p>
-        </div>
-        <h1 class="hi-i-am-container">
+        <div class="hi-i-am-container">
             <p class="hi-i-am">Hi, I am John,</p>
             <p class="hi-i-am">Creative Technologist</p>
-        </h1>
+        </div>
+        <img class="home-inner" alt="" src="https://i.redd.it/g4fm789q2cc11.jpg">
         <div class="amet-minim-mollit">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
