@@ -214,6 +214,12 @@
         .button-link:hover {
             background-color: #0056b3;
         }
+        
+        .vertical-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Optional: Center-align the buttons */
+        }
     </style>
 </head>
 <body>
@@ -224,8 +230,10 @@
         <ul>
             <li><a class="button-link" href="#main">Main</a></li>
             <li><a class="button-link" href="#about-me">About Someone</a></li>
-            <li><a class="button-link" href="#practical-works">Practical Works</a></li>
-            <li><a class="button-link" href="#laboratory-classes">Laboratory Works</a></li>
+            <li class="vertical-buttons">
+                <a class="button-link" href="#practical-works">Practical Works</a>
+                <a class="button-link" href="#laboratory-classes">Laboratory Works</a>
+            </li>
         </ul>
     </nav>
 
