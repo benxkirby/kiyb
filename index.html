@@ -127,16 +127,16 @@
 
         .home-inner {
             position: relative;
-            width: 150px; /* Adjust the width as needed */
-            height: 75px; /* Set half of the width to create a semicircle */
+            width: 150px; /* Adjust the width as needed for a circle */
+            height: 150px; /* Set the height equal to the width for a circle */
             margin: 20px auto; /* Center the image horizontally */
             overflow: hidden; /* Clip the image to the border-radius */
+            border-radius: 50%; /* Create a circle */
         }
 
         .home-inner img {
             width: 100%; /* Make the image fill the container */
             height: auto; /* Maintain the aspect ratio */
-            border-radius: 50% 50% 0 0; /* Create a semicircle effect */
             object-fit: cover; /* Cover the container without stretching */
         }
         /* Add more styles for other classes and elements as needed */
