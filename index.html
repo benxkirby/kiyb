@@ -140,6 +140,34 @@
             height: auto; /* Maintain the aspect ratio */
             object-fit: cover; /* Cover the container without stretching */
         }
+        
+        /* Updated styles for the footer */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-white);
+            text-align: center;
+            font-size: var(--font-size-sm);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .footer-child {
+            flex-grow: 1;
+        }
+
+        .fb-icon,
+        .group-icon,
+        .insta-icon,
+        .linkedin-icon {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+        }
         /* Add more styles for other classes and elements as needed */
 
     </style>
@@ -210,5 +238,16 @@
             </li>
         </ul>
     </section>
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="footer-child"></div>
+        <img class="fb-icon" alt="" src="./public/fb.svg" />
+        <img class="linkedin-icon" alt="" src="./public/linkedin.svg" />
+        <img class="group-icon" alt="" src="./public/group.svg" />
+        <img class="insta-icon" alt="" src="./public/insta.svg" />
+        <div class="copyright-2020-all">
+            Copyright ©2020 All rights reserved
+        </div>
+    </div>
 </body>
 </html>
