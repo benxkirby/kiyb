@@ -215,6 +215,11 @@
             background-color: #0056b3;
         }
         
+        .vertical-buttons ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Optional: Center-align the buttons */
+        }
     </style>
 </head>
 <body>
@@ -251,38 +256,42 @@
     <!-- Practical Works Section -->
     <section id="practical-works">
         <h2>Practical Works</h2>
-        <ul>
-            <li>
-                <a class="button-link" href="/kisyr/Practical_work_1.html">Practical Work 1</a>
-            </li>
-            <li>
-                <a class="button-link" href="practical-work2.html">Practical Work 2</a>
-                <p>[Brief Description]</p>
-            </li>
-        </ul>
+        <div class="vertical-buttons">
+            <ul>
+                <li>
+                    <a class="button-link" href="/kisyr/Practical_work_1.html">Practical Work 1</a>
+                </li>
+                <li>
+                    <a class="button-link" href="practical-work2.html">Practical Work 2</a>
+                    <p>[Brief Description]</p>
+                </li>
+            </ul>
+        </div>
     </section>
 
     <!-- Laboratory Classes Section -->
     <section id="laboratory-classes">
         <h2>Laboratory Works</h2>
-        <ul>
-            <li>
-                <a class="button-link" href="/kiyb/task1.html">Laboratory Task 1</a>
-                <p>[Brief Description]</p>
-            </li>
-            <li>
-                <a class="button-link" href="/kisyr/lab_task_2.html">Laboratory Task 2</a>
-                <p>[Brief Description]</p>
-            </li>
-            <li>
-                <a class="button-link" href="/kisyr/lab_task_3.html">Laboratory Task 3</a>
-                <p>[Brief Description]</p>
-            </li>
-            <li>
-                <a class="button-link" href="/kisyr/lab_task_4.html">Laboratory Task 4</a>
-                <p>[Brief Description]</p>
-            </li>
-        </ul>
+        <div class="vertical-buttons">
+            <ul>
+                <li>
+                    <a class="button-link" href="/kiyb/task1.html">Laboratory Task 1</a>
+                    <p>[Brief Description]</p>
+                </li>
+                <li>
+                    <a class="button-link" href="/kisyr/lab_task_2.html">Laboratory Task 2</a>
+                    <p>[Brief Description]</p>
+                </li>
+                <li>
+                    <a class="button-link" href="/kisyr/lab_task_3.html">Laboratory Task 3</a>
+                    <p>[Brief Description]</p>
+                </li>
+                <li>
+                    <a class="button-link" href="/kisyr/lab_task_4.html">Laboratory Task 4</a>
+                    <p>[Brief Description]</p>
+                </li>
+            </ul>
+        </div>
     </section>
 
     <!-- Footer Section -->
