@@ -27,6 +27,9 @@
 
     .container {
       height: 100vh;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr;
     }
 
     .header {
@@ -48,7 +51,6 @@
       flex-direction: column;
       padding: 10px;
       max-width: 300px;
-      height: 100%; /* Add overflow: auto to enable scrolling if needed */
     }
     
     /* Add this style to stretch the left side */
@@ -58,7 +60,10 @@
     }
     
     .article-container {
-      height: 100%; /* Ensure .article-container covers the entire height */
+      display: grid;
+      grid-template-rows: auto auto auto;
+      gap: 10px;
+      height: 100%;
     }
 
     .section-title {
@@ -76,7 +81,6 @@
     }
 
     .days-of-week {
-      grid-area: right;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
