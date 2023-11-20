@@ -18,16 +18,19 @@
     body {
       display: grid;
       grid-template-columns: auto 1fr;
-      grid-template-rows: auto 1fr auto;
-      height: 100vh;
-      margin: 0; /* Remove the default margin */
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+      min-height: 100vh;
     }
 
     .container {
-      height: 100%;
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: auto 1fr;
       grid-template-rows: auto 1fr;
+      grid-area: main;
     }
 
     .header {
@@ -83,7 +86,10 @@
       grid-template-rows: repeat(2, 1fr);
     }
     
-
+    .footer {
+      grid-area: footer;
+    }
+    
     .day {
       display: flex;
       flex-direction: column;
