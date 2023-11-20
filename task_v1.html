@@ -56,7 +56,13 @@
       max-width: 300px;
       height: 100%; /* Set height to 100% to cover the entire height */
     }
-
+    
+    /* Add this style to stretch the left side */
+    .left .article-container {
+      height: 100%;
+      overflow: auto; /* Add overflow: auto to enable scrolling if needed */
+    }
+    
     .article-container {
       display: grid;
       grid-template-rows: auto auto auto; /* Adjusted grid-template-rows */
