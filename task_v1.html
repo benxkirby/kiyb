@@ -18,14 +18,14 @@
     body {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: auto 1fr auto;
       height: 100vh;
     }
 
     .container {
       height: 100%;
       display: grid;
-      grid-template-columns: 300px 1fr;
+      grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
     }
 
@@ -44,12 +44,9 @@
     }
 
     .left {
-      grid-area: left;
       display: flex;
       flex-direction: column;
       padding: 10px;
-      max-width: 300px;
-      height: 100%; /* Set left height to 100% */
     }
     
     /* Add this style to stretch the left side */
@@ -80,11 +77,15 @@
     }
 
     .days-of-week {
-      grid-area: right;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      height: 100%;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #ccc; /* Add your desired background color */
     }
 
     .day {
