@@ -16,10 +16,10 @@
     }
 
     body {
-      font-family: 'YourCustomFont', sans-serif;
       display: grid;
       grid-template-columns: auto 1fr;
       grid-template-rows: auto 1fr;
+      height: 100vh;
     }
 
     .container {
@@ -49,6 +49,8 @@
       flex-direction: column;
       padding: 10px;
       max-width: 300px;
+      height: 100%; /* Set left height to 100% */
+      overflow: auto; /* Enable scrolling if needed */
     }
     
     /* Add this style to stretch the left side */
