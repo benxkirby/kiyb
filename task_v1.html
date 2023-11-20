@@ -12,16 +12,13 @@
       height: 100%;
       margin: 0;
       padding: 0;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      grid-template-rows: auto 1fr;
-      grid-template-areas:
-        "header header"
-        "left right";
     }
 
     body {
       font-family: 'YourCustomFont', sans-serif;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr;
     }
 
     .container {
@@ -29,9 +26,6 @@
       display: grid;
       grid-template-columns: auto 1fr;
       grid-template-rows: auto 1fr;
-      grid-template-areas:
-        "header header"
-        "left right";
     }
 
     .header {
@@ -49,12 +43,12 @@
     }
 
     .left {
-      grid-area: left;
       display: flex;
       flex-direction: column;
       padding: 10px;
       max-width: 300px;
-      height: 100%; /* Set height to 100% to cover the entire height */
+      height: 100%;
+      overflow: auto; /* Add overflow: auto to enable scrolling if needed */
     }
     
     /* Add this style to stretch the left side */
