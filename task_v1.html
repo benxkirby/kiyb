@@ -72,6 +72,16 @@
       margin-bottom: 5px;
     }
 
+    .small-text-input {
+      width: calc(50% - 10px); /* Reduced width to 50% */
+      margin: 0;
+      padding: 5px;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 1px solid #000;
+      font-size: 0.8em; /* Adjusted font size */
+    }
+
     .text-input {
       width: calc(100% - 10px);
       margin: 0;
@@ -79,8 +89,7 @@
       box-sizing: border-box;
       border: none;
       border-bottom: 1px solid #000;
-      font-size: 0.8em; /* Adjusted font size */
-      display: inline-block; /* Added to allow inline elements */
+      font-size: 1em; /* Adjusted font size */
     }
 
     .days-of-week {
@@ -116,9 +125,9 @@
     <div class="header">
       <h1>PLAN WEEKLY</h1>
       <h2>Week Of</h2>
-      <textarea class="text-input" rows="1" type="text"></textarea>
+      <textarea class="small-text-input" rows="1" type="text"></textarea>
       <h2>Healthy Habit</h2>
-      <textarea class="text-input" rows="1" type="text"></textarea>
+      <textarea class="small-text-input" rows="1" type="text"></textarea>
       <h2>Room for Improvement</h2>
       <h2>Rocked It</h2>
     </div>
