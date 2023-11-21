@@ -121,6 +121,33 @@
       grid-gap: 3px;
       height: 100%; /* Ensure .weekly-plan covers the entire height */
     }
+    
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .checkbox {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #000;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+
+    .check-mark {
+      display: none;
+      width: 16px;
+      height: 16px;
+      background-color: #00ff00;
+      position: relative;
+      top: 2px;
+      left: 2px;
+    }
+
+    .checkbox:checked + .check-mark {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -128,8 +155,16 @@
     <div class="header">
       <h1>PLAN WEEKLY</h1>
       <h2>Week Of</h2>
+      <div class="checkbox-container">
+        <input type="checkbox" class="checkbox">
+        <div class="check-mark"></div>
+      </div>
       <textarea class="small-text-input" rows="1" type="text"></textarea>
       <h2>Healthy Habit</h2>
+      <div class="checkbox-container">
+        <input type="checkbox" class="checkbox">
+        <div class="check-mark"></div>
+      </div>
       <textarea class="small-text-input" rows="1" type="text"></textarea>
       <h2>Room for Improvement</h2>
       <h2>Rocked It</h2>
