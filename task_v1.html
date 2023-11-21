@@ -134,6 +134,7 @@
       border: 1px solid #000;
       margin-right: 5px;
       cursor: pointer;
+      outline: none;
     }
 
     .check-mark {
@@ -149,6 +150,10 @@
 
     .checkbox:checked + .check-mark {
       display: block;
+    }
+
+    .checkbox:focus {
+      outline: none;
     }
   </style>
 </head>
