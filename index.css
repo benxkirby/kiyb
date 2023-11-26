@@ -108,9 +108,6 @@
     right: 0;
     background-color: #edf7fa;
     height: 396px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .rectangle-div {
   	position: absolute;
