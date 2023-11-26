@@ -104,11 +104,13 @@
 .rectangle-section {
     position: absolute;
     top: 595px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
     background-color: #edf7fa;
-    width: 100%;
     height: 396px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .rectangle-div {
   	position: absolute;
