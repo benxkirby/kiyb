@@ -93,18 +93,21 @@
   	height: 21px;
 }
 .home-inner {
-    position: relative;
-    background-color: #edf7fa;
-    width: 100%;
-    height: 396px;
+  	position: absolute;
+  	top: 210px;
+  	left: 760px;
+  	border-radius: 50%;
+  	width: 243px;
+  	height: 243px;
+  	object-fit: cover;
 }
 .rectangle-section {
-    position: absolute;
-    top: 595px;
-    left: 0;
-    right: 0;
-    background-color: #edf7fa;
-    height: 396px;
+  	position: absolute;
+  	top: 595px;
+  	left: 0px;
+  	background-color: #edf7fa;
+  	width: 1152px;
+  	height: 396px;
 }
 .rectangle-div {
   	position: absolute;
