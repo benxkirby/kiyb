@@ -102,12 +102,17 @@
   	object-fit: cover;
 }
 .rectangle-section {
-  	position: absolute;
-  	top: 595px;
-  	left: 0px;
-  	background-color: #edf7fa;
-  	width: 100%;
-  	height: 396px;
+    position: absolute;
+    top: 595px;
+    left: 0;
+    background-color: #edf7fa;
+    width: 100%;
+    height: 396px;
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+.home {
+    position: relative; /* Make sure it's a positioned container */
 }
 .rectangle-div {
   	position: absolute;
