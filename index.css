@@ -108,7 +108,6 @@
     background-color: #edf7fa;
     width: 100%;
     height: 396px;
-    z-index: -1; /* Ensure it's behind other content */
 }
 .rectangle-div {
   	position: absolute;
