@@ -103,9 +103,10 @@
 }
 .rectangle-section {
     position: absolute;
-    top: 595px;
+    top: 50%;
     left: 0;
     right: 0;
+    transform: translateY(-50%);
     background-color: #edf7fa;
     height: 396px;
 }
