@@ -106,7 +106,6 @@
     width: 100%;
     height: 396px;
     box-sizing: border-box;
-    position: relative; /* Change from absolute to relative */
 }
 .rectangle-div {
   	position: absolute;
