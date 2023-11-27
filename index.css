@@ -1,20 +1,16 @@
 .home-child {
-  	position: absolute;
-  	top: 223px;
-  	left: 755px;
-  	border-radius: 50%;
-  	background-color: #edf7fa;
-  	width: 243px;
-  	height: 243px;
+    border-radius: 50%;
+    background-color: #edf7fa;
+    width: 243px;
+    height: 243px;
+    margin-top: 20px;
 }
 .home-item {
-  	position: absolute;
-  	top: 477px;
-  	left: 148px;
-  	border-radius: 2px;
-  	background-color: #ff6464;
-  	width: 208px;
-  	height: 47px;
+    border-radius: 2px;
+    background-color: #ff6464;
+    width: 208px;
+    height: 47px;
+    margin-top: 20px;
 }
 .hi-i-am {
   	margin: 0;
