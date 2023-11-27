@@ -103,9 +103,8 @@
 }
 .rectangle-section {
     background-color: #edf7fa;
-    width: 100%;
+    width: 100vw;
     height: 396px;
-    margin-top: 20px; /* Adjust as needed */
 }
 .rectangle-div {
   	position: absolute;
