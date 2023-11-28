@@ -86,6 +86,13 @@
     </style>
   </head>
   <body>
+    <script>
+    // Assuming you have button elements with IDs like button1, button2, etc.
+    document.getElementById('button1').addEventListener('click', function() {
+      window.location.href = 'https://benxkirby.github.io/kiyb/';
+    });
+    // Add similar event listeners for other buttons if needed
+    </script>
     <div class="home" id="homeContainer">
       <div class="home-child"></div>
       <div class="home-item"></div>
@@ -100,7 +107,7 @@
       </div>
     <nav>
       <ul class="navigation-menu">
-        <li><a class="button-link" href="#main">Main</a></li>
+        <li><a id="button1" class="button-link" href="#main">Main</a></li>
         <li><a class="button-link" href="#about-me">About Someone</a></li>
         <li><a class="button-link" href="#practical-works">Practical Works</a></li>
         <li><a class="button-link" href="#laboratory-classes">Laboratory Works</a></li>
