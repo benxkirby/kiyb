@@ -12,6 +12,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column; /* Align items in a column */
       height: 100vh;
       margin: 0;
     }
@@ -52,8 +53,13 @@
     .navigation-menu {
       list-style: none;
       padding: 0;
-      text-align: center;
-      justify-content: center; /* Center the buttons horizontally */
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #ffffff; /* Optional: Add background color */
     }
 
     .navigation-menu li {
