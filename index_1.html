@@ -39,7 +39,7 @@
         .pokerball:before,
         .pokerball:after {
             content: " ";
-            border-radius: 50%;
+            border-radius: 100%;
             display: block;
             position: absolute;
         }
@@ -61,6 +61,39 @@
 
             background: yellow;
             border: double var(--pokerball-border-size) blue;
+        }
+
+        .pokerball-animated{
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-name: shake;
+        }
+
+        @keyframes shake{
+            from{
+                transform: none;
+            }
+
+            20%{
+                transform: translate3d(-20%,0,0) rotate3d(0,0,1, -10deg);
+            }
+
+            40%{
+                transform: translate3d(20%,0,0) rotate3d(0,0,1, 5deg);
+            }
+
+            50%{
+                transform: translate3d(-10%,0,0) rotate3d(0,0,1, -10deg);
+            }
+
+            60%{
+                transform: translate3d(10%,0,0) rotate3d(0,0,1, 5deg);
+            }
+
+            to{
+                transform: none;
+            }
         }
     </style>
 </head>
