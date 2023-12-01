@@ -1,73 +1,74 @@
-<html lang="en"> 
-    </head>
-        <meta charset="UTF-8">   
-        <title>Pokerball</title>
-        
-        <styles>
-            .container{
-                margin-top: 60px;
-            }
+<!DOCTYPE html>
+<html lang="en">
 
-            .pokerball{
-                box-sizing: border-baox;
-                --pokerball-size: 250px;
-                --pokerball--inner-size: 80px;
-                --pokerball-border-size: 20px:
+<head>
+    <meta charset="UTF-8">
+    <title>Pokerball</title>
+    <style>
+        .container {
+            margin-top: 60px;
+        }
 
-                --before-diameter; var(--pokerball--inner-size);
-                --after-diameter: calc();
+        .pokerball {
+            box-sizing: border-box;
+            --pokerball-size: 250px;
+            --pokerball-inner-size: 80px;
+            --pokerball-border-size: 20px;
 
-                border: var(--pokerball--border-size) solid;
-                width: var(--pokerball-size);
-                height: var(--pokerball-size);
-                border-radius: 100%;
-                margin: 0 auto:
+            --before-diameter: var(--pokerball-inner-size);
+            --after-diameter: calc(var(--pokerball-size) - 2 * var(--pokerball-border-size));
 
-                background: linear-gradi{
-                    150deg,
-                    #BA0C2F 0%,
-                    #BA0C2F 44%,
-                    #262122 44%,
-                    #262122 56%,
-                    #fff 56%,
-                    #fff 100%
-                };
-            }
+            border: var(--pokerball-border-size) solid;
+            width: var(--pokerball-size);
+            height: var(--pokerball-size);
+            border-radius: 50%;
+            margin: 0 auto;
 
-            .pokerball:before,
-            .pokerball:after{
-                content: " ";
-                border-radius: 100%;
-                display: block;
-                position: absolute;
-            }
+            background: linear-gradient(
+                150deg,
+                #BA0C2F 0%,
+                #BA0C2F 44%,
+                #262122 44%,
+                #262122 56%,
+                #fff 56%,
+                #fff 100%
+            );
+            position: relative;
+        }
 
-            .pokerball:before{
-                background: green;
-                width: var(--before-diameter);
-                height: var(--before-diameter);
-                top: calc(50% - var(--before-diameter) / 2);
-                left: calc(50% - var(--before-diameter) / 2);
-            }
+        .pokerball:before,
+        .pokerball:after {
+            content: " ";
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+        }
 
-            pokerball:after{
-                width: var(--after-diameter);
-                height: var(--after-diameter);
+        .pokerball:before {
+            background: green;
+            width: var(--before-diameter);
+            height: var(--before-diameter);
+            top: calc(50% - var(--before-diameter) / 2);
+            left: calc(50% - var(--before-diameter) / 2);
+        }
 
-                top: calc(50% - ((var(--after-diameter) / 2) + var(--pokerball--border-size)));
-                left: calc(50% - ((var(--after-diameter) / 2) + var(--pokerball--border-size)));
-                
-                background: yellow;
-                border: double var(--pokerball--border-size) blue;
-            }
+        .pokerball:after {
+            width: var(--after-diameter);
+            height: var(--after-diameter);
 
-        </styles>
-    </head>
-    <body>
-        <div class="container">
-            <div class="pokerball">
-                
-            </div>
-        </div>
-    </body>
+            top: calc(50% - var(--after-diameter) / 2);
+            left: calc(50% - var(--after-diameter) / 2);
+
+            background: yellow;
+            border: double var(--pokerball-border-size) blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="pokerball"></div>
+    </div>
+</body>
+
 </html>
