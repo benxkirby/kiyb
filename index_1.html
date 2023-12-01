@@ -11,7 +11,117 @@
 
         .pokerball {
             box-sizing: border-box;
+            --pokerball-size: 250px;<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pokerball</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin-top: 60px;
+        }
+
+        .pokerball {
             --pokerball-size: 250px;
+            --pokerball-inner-size: 80px;
+            --pokerball-border-size: 20px;
+
+            --before-diameter: var(--pokerball-inner-size);
+            --after-diameter: calc(var(--pokerball-size) - 2 * var(--pokerball-border-size));
+
+            border: var(--pokerball-border-size) solid;
+            width: var(--pokerball-size);
+            height: var(--pokerball-size);
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+
+            background: linear-gradient(
+                150deg,
+                #BA0C2F 0%,
+                #BA0C2F 44%,
+                #262122 44%,
+                #262122 56%,
+                #fff 56%,
+                #fff 100%
+            );
+        }
+
+        .pokerball:before,
+        .pokerball:after {
+            content: "";
+            border-radius: 100%;
+            display: block;
+            position: absolute;
+        }
+
+        .pokerball:before {
+            background: green;
+            width: var(--before-diameter);
+            height: var(--before-diameter);
+            top: calc(50% - var(--before-diameter) / 2);
+            left: calc(50% - var(--before-diameter) / 2);
+        }
+
+        .pokerball:after {
+            width: var(--after-diameter);
+            height: var(--after-diameter);
+
+            top: calc(50% - ((var(--after-diameter) / 2) + var(--pokerball-border-size)));
+            left: calc(50% - ((var(--after-diameter) / 2) + var(--pokerball-border-size)));
+
+            background: yellow;
+            border: double var(--pokerball-border-size) blue;
+        }
+
+        .pokerball-animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-name: shake;
+        }
+
+        @keyframes shake {
+            from {
+                transform: none;
+            }
+
+            20% {
+                transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+            }
+
+            40% {
+                transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 5deg);
+            }
+
+            50% {
+                transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -10deg);
+            }
+
+            60% {
+                transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+            }
+
+            to {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="pokerball pokerball-animated"></div>
+    </div>
+</body>
+
+</html>
+
             --pokerball-inner-size: 80px;
             --pokerball-border-size: 20px;
 
