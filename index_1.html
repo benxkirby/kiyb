@@ -23,6 +23,7 @@
             height: var(--pokerball-size);
             border-radius: 50%;
             margin: 0 auto;
+            position: relative;
 
             background: linear-gradient(
                 150deg,
@@ -33,7 +34,6 @@
                 #fff 56%,
                 #fff 100%
             );
-            position: relative;
         }
 
         .pokerball:before,
@@ -56,8 +56,8 @@
             width: var(--after-diameter);
             height: var(--after-diameter);
 
-            top: calc(50% - var(--after-diameter) / 2);
-            left: calc(50% - var(--after-diameter) / 2);
+            top: calc(50% - ((var(--after-diameter) / 2) + var(--pokerball-border-size)));
+            left: calc(50% - ((var(--after-diameter) / 2) + var(--pokerball-border-size)));
 
             background: yellow;
             border: double var(--pokerball-border-size) blue;
