@@ -13,16 +13,17 @@
                 box-sizing: border-box;
                 --pokerball-size: 250px;
                 --pokerball-inner-size: 80px;
-                --pokerball-border-size: 20px;
+                --pokerball-border-size: 10px;
 
                 --before-diameter: var(--pokerball-inner-size);
-                --after-diameter: calc();
+                --after-diameter: calc(var(--before-diameter) - var(--pokerball-border-size) * 3);
 
-                border: var(--pokerball-border-size) solid;
+                border: var(--pokerball-border-size) solid #262122;
                 width: var(--pokerball-size);
                 height: var(--pokerball-size);
                 border-radius: 100%;
                 margin: 0 auto;
+                position: relative;
 
                 background: linear-gradient(
                     150deg,
@@ -44,11 +45,11 @@
             }
 
             .pokerball:before {
-                background: green;
                 width: var(--before-diameter);
                 height: var(--before-diameter);
                 top: calc(50% - var(--before-diameter) / 2);
                 left: calc(50% - var(--before-diameter) / 2);
+                background: #262122;
             }
 
             .pokerball:after {
@@ -58,8 +59,8 @@
                 top: calc(50% - ((var(--after-diameter) / 2) + var(--pokerball--border-size)));
                 left: calc(50% - ((var(--after-diameter) / 2) + var(--pokerball--border-size)));
 
-                background: yellow;
-                border: double var(--pokerball-border-size) blue;
+                background: #fff;
+                border: double var(--pokerball-border-size) #262122;
             }
         </style>
     </head>
