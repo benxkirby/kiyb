@@ -24,6 +24,7 @@
             border-radius: 100%;
             margin: 0 auto;
             position: relative;
+            animation: shake 1s infinite; /* Added animation property */
 
             background: linear-gradient(
                 150deg,
@@ -62,38 +63,23 @@
             background: #fff;
             border: double var(--pokerball-border-size) #262122;
         }
-        
-        .pokerball-animated {
-            animation-duration: 1s;
-            animation-fill-mode: both;
-            animation-iteration-count: infinite;
-            animation-name: shake;
-        }
 
         @keyframes shake {
-                from {
-                    transform: none;
-                }
+            20% {
+                transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+            }
 
-                20% {
-                    transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
-                }
+            40% {
+                transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 5deg);
+            }
 
-                40% {
-                    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 5deg);
-                }
+            50% {
+                transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -10deg);
+            }
 
-                50% {
-                    transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -10deg);
-                }
-
-                60% {
-                    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
-                }
-
-                to {
-                    transform: none;
-                }
+            60% {
+                transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+            }
         }
     </style>
 </head>
