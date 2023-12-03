@@ -6,8 +6,89 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="index_v1.css">
         <title>Pokerball</title>
+        <style>
+        .container {
+            margin-top: 60px;
+        }
+
+        .pokerball {
+            box-sizing: border-box;
+            --pokerball-size: 250px;
+            --pokerball-inner-size: 80px;
+            --pokerball-border-size: 10px;
+
+            --before-diameter: var(--pokerball-inner-size);
+            --after-diameter: calc(var(--before-diameter) - (var(--pokerball-border-size) * 3));
+
+            border: var(--pokerball-border-size) solid #262122;
+            width: var(--pokerball-size);
+            height: var(--pokerball-size);
+            border-radius: 100%;
+            margin: 0 auto;
+            position: relative;
+            animation: shake 1s infinite; /* Added animation property */
+
+            background: linear-gradient(
+                150deg,
+                #BA0C2F 0%,
+                #BA0C2F 44%,
+                #262122 44%,
+                #262122 56%,
+                #fff 56%,
+                #fff 100%
+            );
+        }
+
+        .pokerball:before,
+        .pokerball:after {
+            content: " ";
+            border-radius: 100%;
+            display: block;
+            position: absolute;
+        }
+
+        .pokerball:before {
+            width: var(--before-diameter);
+            height: var(--before-diameter);
+            top: calc(50% - var(--before-diameter) / 2);
+            left: calc(50% - var(--before-diameter) / 2);
+            background: #262122;
+        }
+
+        .pokerball:after {
+            width: var(--after-diameter);
+            height: var(--after-diameter);
+
+            top: calc(50% - ((var(--after-diameter) / 2) + var(--pokerball-border-size)));
+            left: calc(50% - ((var(--after-diameter) / 2) + var(--pokerball-border-size)));
+
+            background: #fff;
+            border: double var(--pokerball-border-size) #262122;
+        }
+
+        @keyframes shake {
+            20% {
+                transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
+            }
+
+            40% {
+                transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 5deg);
+            }
+
+            50% {
+                transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -10deg);
+            }
+
+            60% {
+                transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
+            }
+        }
+        </style>
     </head>
     <body>
+        <div class="container">
+            <div class="pokerball"></div>
+        </div>
         <div class="background-wrap">
             <div class="bubble x1"></div>
             <div class="bubble x2"></div>
