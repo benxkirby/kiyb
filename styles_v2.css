@@ -111,25 +111,26 @@ main{
 .active {
   background: #e5e5e5;
 }
-.content{
+.content {
   background-color: white;
   width: 100%;
   height: 100%;
   padding: 15px 15px;
-  bodrder-top: 1px solid #dd;
+  border-top: 1px solid #dd; /* Fix the typo here */
   justify-content: space-between;
   overflow-y: scroll;
 }
 
 .videos {
-   width: calc(100% - 250px);
-    margin-top: 120px;
-    margin-left: 250px;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-gap: 20px 5px;
-    overflow-x: hidden;
+  position: absolute;
+  top: 70px; /* Adjust the top margin as needed */
+  left: 10px; /* Adjust the left margin as needed */
+  width: calc(100% - 250px);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-gap: 20px 5px;
+  overflow-x: hidden;
 }
 
 .video{
@@ -137,17 +138,18 @@ main{
   margin-bottom: 30px;
 }
 
-.thumbnail{
-    width: 100%;
-    height: 170px;
-    border-radious: 5px;
-    overflow: hidden;
-  }
-.thumbnail img{
-    object-fit: cover;
-    height: 89%;
-    widht: 70%;
-  }
+.thumbnail {
+  width: 100%;
+  height: 170px;
+  border-radius: 5px; /* Fix the typo here */
+  overflow: hidden;
+}
+
+.thumbnail img {
+  object-fit: cover;
+  height: 89%;
+  width: 70%;
+}
 .author img{
   object-fit: cover;
   height: 40px;
