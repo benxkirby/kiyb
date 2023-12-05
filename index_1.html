@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edges">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="index_v1.css">
-        <title>Pokerball</title>
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edges">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index_v1.css">
+    <title>Pokerball</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
         .container {
-            margin-top: 60px;
+            position: absolute;
+            z-index: 1;
         }
 
         .pokerball {
@@ -16,10 +26,8 @@
             --pokerball-size: 250px;
             --pokerball-inner-size: 80px;
             --pokerball-border-size: 10px;
-
             --before-diameter: var(--pokerball-inner-size);
             --after-diameter: calc(var(--before-diameter) - (var(--pokerball-border-size) * 3));
-
             border: var(--pokerball-border-size) solid #262122;
             width: var(--pokerball-size);
             height: var(--pokerball-size);
@@ -27,7 +35,6 @@
             margin: 0 auto;
             position: relative;
             animation: shake 1s infinite; /* Added animation property */
-
             background: linear-gradient(
                 150deg,
                 #BA0C2F 0%,
@@ -58,10 +65,8 @@
         .pokerball:after {
             width: var(--after-diameter);
             height: var(--after-diameter);
-
             top: calc(50% - ((var(--after-diameter) / 2) + var(--pokerball-border-size)));
             left: calc(50% - ((var(--after-diameter) / 2) + var(--pokerball-border-size)));
-
             background: #fff;
             border: double var(--pokerball-border-size) #262122;
         }
@@ -83,23 +88,24 @@
                 transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
             }
         }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="pokerball"></div>
-        </div>
-        <div class="background-wrap">
-            <div class="bubble x1"></div>
-            <div class="bubble x2"></div>
-            <div class="bubble x3"></div>
-            <div class="bubble x4"></div>
-            <div class="bubble x5"></div>
-            <div class="bubble x6"></div>
-            <div class="bubble x7"></div>
-            <div class="bubble x8"></div>
-            <div class="bubble x9"></div>
-            <div class="bubble x10"></div>
-        </div>
-    </body>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pokerball"></div>
+    </div>
+    <img src="https://arnavprasad.me/img/projects/shiny_hunter/normal.gif" alt="Shiny Hunter" style="z-index: 2; position: absolute;">
+    <div class="background-wrap">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+        <div class="bubble x6"></div>
+        <div class="bubble x7"></div>
+        <div class="bubble x8"></div>
+        <div class="bubble x9"></div>
+        <div class="bubble x10"></div>
+    </div>
+</body>
 </html>
