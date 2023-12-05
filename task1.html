@@ -11,48 +11,41 @@
   <title>Youtube Clone with HTML & CSS</title>
 </head>
 <style>
-        .content {
-          background-color: white;
-          width: 100%;
-          height: 100%;
-          padding: 15px 15px;
-          border-top: 1px solid #dd;
-          overflow-y: scroll;
-        }
-        
-        .video {
-          width: 270px;
-          margin-bottom: 30px;
-        }
-        
-        .video-container .flex-box img {
-          border-radius: 50%;
-          width: 35px;
-          margin-right: 10px;
-          margin-left: 5px;
-        }
-        
-        .video-container .flex-box {
-          align-items: flex-start;
-          margin-top: 5px;
-        }
-        .video-section {
-            display: flex;
-            flex-wrap: wrap; /* Wrap to the next line */
-            gap: 20px; /* Adjust the gap between videos */
-        }
-        
-        .video-container {
-            flex: 0 0 calc(16.666% - 20px); /* 6 videos per row, adjust as needed */
-            margin-bottom: 20px; /* Adjust the bottom margin */
-            box-sizing: border-box; /* Include padding and border in the element's total width and height */
-            width: 100%; /* Make sure each video takes the full width */
-        }
-        
-        .video-container:last-child {
-            margin-right: 0;
-        }
-        /* End of added CSS */
+      .content {
+        background-color: white;
+        padding: 15px; /* Adjust padding */
+        border-top: 1px solid #dd;
+        overflow-y: scroll;
+      }
+      
+      .videos {
+        max-width: 1200px; /* Set a max-width for better control */
+        margin: 0 auto; /* Center the videos container */
+      }
+      
+      /* Add this CSS to ensure proper width for video containers */
+      .video-section {
+        box-sizing: border-box;
+        width: 100%;
+      }
+      
+      .video-container {
+        box-sizing: border-box;
+        width: calc(33.333% - 20px); /* Adjust width, considering the gap */
+        margin-bottom: 20px;
+      }
+      
+      /* Adjust width of video elements */
+      .thumbnail-image {
+        width: 100%;
+      }
+      
+      .channel-icon {
+        width: 100%;
+      }
+      
+      /* End of added CSS */
+
 </style>
 <body>
   <header class="header">
