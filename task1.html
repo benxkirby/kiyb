@@ -12,57 +12,45 @@
 </head>
 <style>
       /* Your existing styles */
+      body {
+        margin: 0; /* Reset default margin */
+      }
+      
       .content {
-        background-color: white;
-        width: 100%;
-        height: 100%;
-        padding: 15px 15px;
-        border-top: 1px solid #dd;
-        overflow-y: scroll;
-        background-position: right center;
-        background-attachment: fixed;
+        display: grid;
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto 1fr; /* Header on top, main content below */
+        height: 100vh; /* Full height of the viewport */
+        background: url('your-background-image.jpg') right center fixed; /* Replace 'your-background-image.jpg' with the actual path to your background image */
         background-size: cover;
       }
       
-      .video {
-        width: 270px;
-        margin-bottom: 30px;
+      .header {
+        /* Your existing header styles */
+        grid-column: 1;
+        z-index: 1; /* Ensure header is above the background */
       }
       
-      .video-container .flex-box img {
-        border-radius: 50%;
-        width: 35px;
-        margin-right: 10px;
-        margin-left: 5px;
-      }
-      
-      .video-container .flex-box {
-        align-items: flex-start;
-        margin-top: 5px;
+      .main {
+        /* Your existing main content styles */
+        grid-column: 1;
+        overflow-y: scroll;
       }
       
       .video-section {
-        display: flex;
-        flex-wrap: wrap; /* Wrap to the next line */
-        justify-content: center; /* Center the video containers horizontally */
-        gap: 20px; /* Adjust the gap between videos */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); /* Responsive grid with minimum width of 270px */
+        gap: 20px;
+        justify-content: center;
+        margin: 15px; /* Adjust margin as needed */
       }
       
       .video-container {
-        flex: 0 0 calc(16.666% - 20px); /* 6 videos per row, adjust as needed */
-        margin-bottom: 20px; /* Adjust the bottom margin */
-        box-sizing: border-box; /* Include padding and border in the element's total width and height */
-        width: 100%; /* Make sure each video takes the full width */
-      }
-      
-      .video-container:last-child {
-        margin-right: 0;
+        /* Your existing video container styles */
+        box-sizing: border-box;
       }
       
       /* End of modified CSS */
-
-
-
 </style>
 <body>
   <header class="header">
