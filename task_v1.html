@@ -121,7 +121,6 @@
       height: 100%;
     }
     
-    /* Adjusted checkbox styling for a larger size */
     .checkbox-container {
       display: flex;
       align-items: center;
@@ -134,6 +133,16 @@
       margin-right: 10px;
     }
 
+    /* Added button styling */
+    .button {
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
   </style>
 </head>
 <body>
@@ -143,11 +152,13 @@
       <h2>Week Of</h2>
       <div class="checkbox-container">
         <input type="checkbox" class="checkbox">
+        <button class="button">Click Me</button>
       </div>
       <textarea class="small-text-input" rows="1" type="text"></textarea>
       <h2>Healthy Habit</h2>
       <div class="checkbox-container">
         <input type="checkbox" class="checkbox">
+        <button class="button">Click Me</button>
       </div>
       <textarea class="small-text-input" rows="1" type="text"></textarea>
       <h2>Room for Improvement</h2>
@@ -160,6 +171,7 @@
             <h2 class="section-title">Top 3 Goals</h2>
             <div class="checkbox-container">
               <input type="checkbox" class="checkbox">
+              <button class="button">Click Me</button>
             </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
             <textarea class="text-input" rows="1" type="text"></textarea>
