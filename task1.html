@@ -12,6 +12,32 @@ User
   <title>Youtube Clone with HTML & CSS</title>
 </head>
 <style>
+        body {
+          background-color: #f0f0f0; /* Set your desired background color */
+          margin: 0; /* Remove default body margin */
+          padding-right: 300px; /* Adjust the padding to match the width of your side panel */
+          box-sizing: border-box; /* Include padding in the total width */
+        }
+        
+        .side-bar {
+          position: fixed;
+          top: 0;
+          right: 0;
+          width: 300px; /* Set the width of your side panel */
+          height: 100vh; /* Set the height to cover the full viewport height */
+          background-color: #fff; /* Set the background color of your side panel */
+          box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle separation from the main content */
+          z-index: 2; /* Ensure the side panel appears above the main content */
+        }
+        
+        .main {
+          margin-right: 300px; /* Adjust the margin to match the width of your side panel */
+          transition: margin-right 0.3s ease; /* Add a smooth transition effect for better user experience */
+        }
+        
+        .side-bar .nav {
+          padding: 20px;
+        }
         /* Add this CSS to make videos display horizontally */
         .video-section {
             display: flex;
