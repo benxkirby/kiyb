@@ -31,6 +31,20 @@
         padding: 20px;
         background-color: #f9f9f9; /* Set a background color for the sidebar */
     }
+    .video-section {
+        display: flex;
+        flex-wrap: wrap; /* Wrap to the next line */
+        gap: 20px; /* Adjust the gap between videos */
+    }
+    
+    .video-container {
+        flex: 0 0 calc(16.666% - 20px); /* 6 videos per row, adjust as needed */
+        margin-bottom: 20px; /* Adjust the bottom margin */
+    }
+    
+    .video-container:last-child {
+        margin-right: 0;
+    }
 </style>
 <body>
   <header class="header">
