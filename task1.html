@@ -11,6 +11,7 @@
   <title>Youtube Clone with HTML & CSS</title>
 </head>
 <style>
+      /* Your existing styles */
       .content {
         background-color: white;
         width: 100%;
@@ -19,41 +20,51 @@
         border-top: 1px solid #dd;
         overflow-y: scroll;
       }
-  
+      
       .video {
         width: 270px;
         margin-bottom: 30px;
       }
-  
+      
       .video-container .flex-box img {
         border-radius: 50%;
         width: 35px;
         margin-right: 10px;
         margin-left: 5px;
       }
-  
+      
       .video-container .flex-box {
         align-items: flex-start;
         margin-top: 5px;
       }
-  
+      
       .video-section {
         display: flex;
         flex-wrap: wrap; /* Wrap to the next line */
         justify-content: center; /* Center the video containers horizontally */
         gap: 20px; /* Adjust the gap between videos */
       }
-  
+      
       .video-container {
         flex: 0 0 calc(16.666% - 20px); /* 6 videos per row, adjust as needed */
         margin-bottom: 20px; /* Adjust the bottom margin */
         box-sizing: border-box; /* Include padding and border in the element's total width and height */
         width: 100%; /* Make sure each video takes the full width */
       }
-  
+      
       .video-container:last-child {
         margin-right: 0;
       }
+      
+      /* New styles for moving background to the right */
+      body {
+        background-position: right center;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      
+      /* End of added CSS */
+
 
 </style>
 <body>
