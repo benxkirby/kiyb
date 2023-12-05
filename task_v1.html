@@ -53,10 +53,9 @@
       padding: 10px;
     }
     
-    /* Add this style to stretch the left side */
     .left .article-container {
       height: 100%;
-      overflow: auto; /* Add overflow: auto to enable scrolling if needed */
+      overflow: auto;
     }
     
     .article-container {
@@ -72,17 +71,17 @@
     }
 
     .small-text-input {
-      width: 400px; /* Increased width */
-      min-width: 100px; /* Minimum width to prevent further resizing */
-      max-width: 400px; /* Maximum width to prevent further resizing */
-      margin-top: 10px; /* Moved down by 20px */
-      margin-bottom: 10px; /* Adjusted margin-bottom */
+      width: 400px;
+      min-width: 100px;
+      max-width: 400px;
+      margin-top: 10px;
+      margin-bottom: 10px;
       padding: 5px;
       box-sizing: border-box;
       border: none;
       border-bottom: 1px solid #000;
-      font-size: 0.8em; /* Adjusted font size */
-      resize: none; /* Disabled resizing */
+      font-size: 0.8em;
+      resize: none;
     }
 
     .text-input {
@@ -92,7 +91,7 @@
       box-sizing: border-box;
       border: none;
       border-bottom: 1px solid #000;
-      font-size: 1em; /* Adjusted font size */
+      font-size: 1em;
     }
 
     .days-of-week {
@@ -117,11 +116,12 @@
 
     .weekly-plan {
       display: grid;
-      grid-template-rows: auto auto auto; /* Adjusted grid-template-rows */
+      grid-template-rows: auto auto auto;
       grid-gap: 3px;
-      height: 100%; /* Ensure .weekly-plan covers the entire height */
+      height: 100%;
     }
     
+    /* Simplified checkbox styling */
     .checkbox-container {
       display: flex;
       align-items: center;
@@ -129,37 +129,9 @@
     }
 
     .checkbox {
-      width: 20px;
-      height: 20px;
-      border: 1px solid #000;
       margin-right: 5px;
-      cursor: pointer;
-      outline: none;
     }
 
-    .check-mark {
-      display: none;
-      width: 16px;
-      height: 16px;
-      background-color: #00ff00;
-      position: relative;
-      top: 2px;
-      left: 2px;
-      display: none;
-    }
-
-    .checkbox:checked + .check-mark {
-      display: block;
-    }
-
-    .checkbox:focus {
-      outline: none !important;
-      box-shadow: none !important;
-    }
-    
-    .checkbox::-moz-focus-inner {
-      box-shadow: none !important;
-    }
   </style>
 </head>
 <body>
@@ -169,13 +141,11 @@
       <h2>Week Of</h2>
       <div class="checkbox-container">
         <input type="checkbox" class="checkbox">
-        <div class="check-mark"></div>
       </div>
       <textarea class="small-text-input" rows="1" type="text"></textarea>
       <h2>Healthy Habit</h2>
       <div class="checkbox-container">
         <input type="checkbox" class="checkbox">
-        <div class="check-mark"></div>
       </div>
       <textarea class="small-text-input" rows="1" type="text"></textarea>
       <h2>Room for Improvement</h2>
