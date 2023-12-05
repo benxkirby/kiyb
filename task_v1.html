@@ -70,6 +70,11 @@
       margin-bottom: 5px;
     }
 
+    .small-text-input-container {
+      display: flex;
+      align-items: center;
+    }
+
     .small-text-input {
       width: 400px;
       min-width: 100px;
@@ -84,14 +89,10 @@
       resize: none;
     }
 
-    .text-input {
-      width: calc(100% - 10px);
-      margin: 0;
-      padding: 5px;
-      box-sizing: border-box;
-      border: none;
-      border-bottom: 1px solid #000;
-      font-size: 1em;
+    .checkbox {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
     }
 
     .days-of-week {
@@ -121,18 +122,6 @@
       height: 100%;
     }
 
-    .checkbox-container {
-      display: flex;
-      align-items: center;
-      margin-top: 22px; /* Increased margin to move the checkbox down by 20 pixels */
-    }
-
-    .checkbox {
-      width: 15px;
-      height: 15px;
-      margin-right: 10px;
-    }
-
   </style>
 </head>
 <body>
@@ -140,15 +129,19 @@
     <div class="header">
       <h1>PLAN WEEKLY</h1>
       <h2>Week Of</h2>
-      <div class="checkbox-container">
-        <input type="checkbox" class="checkbox">
+      <div class="small-text-input-container">
+        <div class="checkbox-container">
+          <input type="checkbox" class="checkbox">
+        </div>
+        <textarea class="small-text-input" rows="1" type="text"></textarea>
       </div>
-      <textarea class="small-text-input" rows="1" type="text"></textarea>
       <h2>Healthy Habit</h2>
-      <div class="checkbox-container">
-        <input type="checkbox" class="checkbox">
+      <div class="small-text-input-container">
+        <div class="checkbox-container">
+          <input type="checkbox" class="checkbox">
+        </div>
+        <textarea class="small-text-input" rows="1" type="text"></textarea>
       </div>
-      <textarea class="small-text-input" rows="1" type="text"></textarea>
       <h2>Room for Improvement</h2>
       <h2>Rocked It</h2>
     </div>
@@ -161,75 +154,27 @@
               <input type="checkbox" class="checkbox">
             </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
           </section>
           <section>
             <h2 class="section-title">Everything Else</h2>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
           </section>
           <section>
             <h2 class="section-title">Next Week</h2>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
-            <div class="checkbox-container">
-              <input type="checkbox" class="checkbox">
-            </div>
             <textarea class="text-input" rows="1" type="text"></textarea>
           </section>
         </article>
