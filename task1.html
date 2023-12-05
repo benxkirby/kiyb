@@ -14,14 +14,15 @@
         /* Add this CSS to make videos display horizontally */
         .video-section {
             display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
+            flex-wrap: wrap; /* Wrap to the next line */
+            gap: 20px; /* Adjust the gap between videos */
         }
-
+        
         .video-container {
-            margin-right: 20px;
+            flex: 0 0 calc(16.666% - 20px); /* 6 videos per row, adjust as needed */
+            margin-bottom: 20px; /* Adjust the bottom margin */
         }
-
+        
         .video-container:last-child {
             margin-right: 0;
         }
