@@ -11,22 +11,26 @@
   <title>Youtube Clone with HTML & CSS</title>
 </head>
 <style>
-        /* Add this CSS to make videos display horizontally */
-        .video-section {
-            display: flex;
-            flex-wrap: wrap; /* Wrap to the next line */
-            gap: 20px; /* Adjust the gap between videos */
-        }
-        
-        .video-container {
-            flex: 0 0 calc(16.666% - 20px); /* 6 videos per row, adjust as needed */
-            margin-bottom: 20px; /* Adjust the bottom margin */
-        }
-        
-        .video-container:last-child {
-            margin-right: 0;
-        }
-        /* End of added CSS */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .videos {
+        width: 70%; /* Adjust the width of the videos section */
+    }
+
+    .side-bar {
+        width: 25%; /* Adjust the width of the sidebar */
+        box-sizing: border-box;
+        padding: 20px;
+        background-color: #f9f9f9; /* Set a background color for the sidebar */
+    }
 </style>
 <body>
   <header class="header">
