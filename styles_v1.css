@@ -65,8 +65,7 @@ hr {
 
 .videos {
   display: flex;
-  justify-content: flex-start; /* Align videos to the start horizontally */
-  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
 }
 
 .video{
@@ -75,11 +74,11 @@ hr {
 }
 
 .video-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  display: flex;
   gap: 20px;
   justify-content: flex-start; /* Align videos to the start horizontally */
   margin: 15px;
+  flex-wrap: nowrap;
 }
   
 .video-container .thumb{
