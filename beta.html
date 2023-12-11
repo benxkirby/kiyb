@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edges">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index_v1.css">
+    <link rel="stylesheet" href="styles_v3.css">
     <title>Pokerball</title>
     <style>
         body {
             margin: 0;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             height: 100vh;
+            background-color: #f0f0f0; /* Added a background color */
         }
 
         .container {
             position: absolute;
+            top: 0; /* Adjusted top positioning */
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 1;
         }
 
@@ -71,6 +72,54 @@
             border: double var(--pokerball-border-size) #262122;
         }
 
+        img {
+            z-index: 2;
+            position: absolute;
+            top: 50%; /* Center the image vertically */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: moveRight 2s forwards, moveLeft 2s forwards, moveCenter 2s forwards;
+        }
+
+        @keyframes moveRight {
+            0% {
+                transform: translate(-50%, -50%);
+            }
+            33% {
+                transform: translate(30%, -50%);
+            }
+            66% {
+                transform: translate(110%, -50%);
+            }
+            100% {
+                transform: translate(110%, -50%);
+            }
+        }
+
+        @keyframes moveLeft {
+            0% {
+                transform: translate(110%, -50%);
+            }
+            33% {
+                transform: translate(30%, -50%);
+            }
+            66% {
+                transform: translate(-50%, -50%);
+            }
+            100% {
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        @keyframes moveCenter {
+            0% {
+                transform: translate(-50%, -50%);
+            }
+            100% {
+                transform: translate(-50%, -50%);
+            }
+        }
+
         @keyframes shake {
             20% {
                 transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
@@ -94,7 +143,7 @@
     <div class="container">
         <div class="pokerball"></div>
     </div>
-    <img src="https://arnavprasad.me/img/projects/shiny_hunter/normal.gif" alt="Shiny Hunter" style="z-index: 2; position: absolute; top: calc(50% - 4cm); left: 50%; transform: translate(-50%, -50%);">
+    <img src="https://arnavprasad.me/img/projects/shiny_hunter/normal.gif" alt="Shiny Hunter">
     <div class="background-wrap">
         <div class="bubble x1"></div>
         <div class="bubble x2"></div>
